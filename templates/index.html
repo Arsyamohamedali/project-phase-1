@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head>
+    <title>Question Answering</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .block-container {
+        flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    max-width: 730px;
+    width: 100%;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    padding-right: 4rem;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    background-color: white;
+
+      }
+    </style>
+  </head>
+  <body>
+    <br><br><br>
+
+    <div class="block-container" style="position: relative; margin: auto">
+
+    <div class="markdown-text-container stMarkdown" style="width: 100%;"><h1 style="font-family: ebrima;">QUESTION ANSWERING</h1></div><div class="element-container" style="width: 100%;"><div class="fixed-width stText" style="width: 100%;font-family: courier new;">PSG College of Technology - Project Work I</div></div>
+
+          <div class="row-sm-5 row-sm-offset-1">
+
+            <form role="form" method="POST" action="/">
+              <div class="form-group">
+                <h4 style="font-family: ebrima; font-weight: normal; margin-top: 2em; margin-bottom:3px">PASSAGE</h4>
+<textarea name="paragraph" class="form-control" id="url-box" placeholder="Enter a paragraph" style="width: 100%; font-family: ebrima; margin-top: 3px; margin-bottom: 3px; background-color: rgb(240, 242, 246); border-color: brown; border-width: 2px; min-height: 50px; border-style: solid" autofocus="" required="">			{% if result %}
+          			{{ result[2] }}
+		        {% endif %}
+		</textarea>
+                 <br>
+                <h4 style="font-family: ebrima; font-weight: normal; margin-top: 1em; margin-bottom:3px">QUESTION</h4>
+
+<input type="text" name="question" class="form-control" id="url-box" placeholder="Enter a question" style="width: 100%;font-family: ebrima;padding: 2px;margin-top: 3px;margin-bottom: 3px;background-color: rgb(240, 242, 246);border-color:brown;border-width: 2px;min-height: 50px; border-style: solid" autofocus="" required="">
+              </div>
+              <button type="submit" class="Widget row-widget stButton" style="font-family: ebrima; padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px; margin-top: 1em; background-color: rgb(201, 192, 147);color: black; font-weight: bold; border-width: 1px; border-color:rgb(240, 242, 246) ">Get Answer</button>
+            </form>
+          <br>
+      </div>
+
+
+      <div class="row-sm-5 row-sm-offset-1">
+          {% if result %}
+
+          <h4 style="font-family: ebrima; font-weight: normal">Answer: {{ result[1] }}</h4>
+          {% endif %}
+      </div>
+
+    </div>
+
+
+</body></html>
